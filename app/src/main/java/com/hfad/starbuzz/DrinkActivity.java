@@ -38,7 +38,7 @@ public class DrinkActivity extends Activity {
                 // get the drink details from the cursor
                 String nameText = cursor.getString(0);
                 String descriptionText = cursor.getString(1);
-                int photoId = cursor.getInt(3);
+                int photoId = cursor.getInt(2);
 
                 //Populate the drink name
                 TextView name = (TextView) findViewById(R.id.name);
