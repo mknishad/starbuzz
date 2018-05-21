@@ -39,7 +39,7 @@ public class DrinkCategoryActivity extends Activity {
 
         //Create the listener
         AdapterView.OnItemClickListener itemClickListener =
-                new AdapterView.OnItemClickListener(){
+                new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listDrinks,
                                             View itemView,
                                             int position,
@@ -58,7 +58,9 @@ public class DrinkCategoryActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        cursor.close();
-        db.close();
+        if (cursor != null)
+            cursor.close();
+        if (db != null)
+            db.close();
     }
 }
